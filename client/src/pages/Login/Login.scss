@@ -1,0 +1,27 @@
+.auth {
+  //height: 500px;
+  width: 400px;
+  background-color: #fff;
+  padding: 30px 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .auth__logo {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16pt;
+    font-weight: 600;
+    color: green;
+
+    img {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+}
