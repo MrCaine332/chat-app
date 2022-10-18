@@ -14,6 +14,19 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors(corsOptions))
 
-app.listen(process.env.PORT || 5000, () => {
-    console.log('App started on port 5000')
-})
+
+const start = async () => {
+    try {
+        await mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
+        app.listen(process.env.PORT || 5000, () => {
+            console.log(`SERVER STARTED ON PORT 5000`)
+        })
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+start()
